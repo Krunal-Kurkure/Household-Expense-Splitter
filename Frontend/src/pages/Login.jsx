@@ -21,7 +21,6 @@ export default function Login() {
   // Form state
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [remember, setRemember] = useState(false);
 
   // UI state
   const [showPassword, setShowPassword] = useState(false);
@@ -59,7 +58,7 @@ export default function Login() {
           "Content-Type": "application/json",
           // Add tokens/CSRF headers here if needed by your backend
         },
-        body: JSON.stringify({ email, password, remember }),
+        body: JSON.stringify({ email, password}),
       });
 
       // If backend returns non-JSON on network error, guard it
@@ -157,24 +156,6 @@ export default function Login() {
               )}
             </label>
 
-            {/* Remember + Forgot */}
-            <div className="flex items-center justify-between mt-3">
-              <label className="inline-flex items-center text-sm">
-                <input
-                  type="checkbox"
-                  checked={remember}
-                  onChange={(e) => setRemember(e.target.checked)}
-                  className="h-4 w-4 rounded border-gray-300 text-emerald-600 focus:ring-emerald-500"
-                />
-                <span className="ml-2 text-gray-600 dark:text-gray-300">Remember me</span>
-              </label>
-
-              <div>
-                <a href="#" className="text-sm font-medium text-emerald-600 hover:underline dark:text-emerald-400">
-                  Forgot password?
-                </a>
-              </div>
-            </div>
 
             {/* Error banner */}
             {error && (
