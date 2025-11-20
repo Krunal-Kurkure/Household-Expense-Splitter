@@ -88,9 +88,9 @@ export default function Register() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 px-4 py-10">
+    <div className="min-h-screen flex items-center justify-center bg-background dark:bg-gray-900 px-4 py-10">
       <div className="w-full max-w-sm sm:max-w-sm md:max-w-md space-y-6">
-        <div className="bg-white dark:bg-gray-800 shadow-md rounded-xl p-5 sm:p-6">
+        <div className="bg-white border border-warning dark:border-accent dark:bg-gray-800 shadow-md rounded-xl p-5 sm:p-6">
           <div className="text-center mb-4">
             <h2 className="mt-3 text-lg sm:text-xl font-semibold text-gray-900 dark:text-gray-100">
               Create account here
@@ -114,7 +114,7 @@ export default function Register() {
                   onChange={(e) => setName(e.target.value)}
                   aria-invalid={fieldErrors.name ? "true" : "false"}
                   aria-describedby={fieldErrors.name ? "name-error" : undefined}
-                  className={`block w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2.5 text-gray-800 dark:text-gray-100 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-emerald-500 dark:focus:ring-emerald-400 ${
+                  className={`block w-full rounded-lg  border border-warning dark:border-accent bg-white dark:bg-gray-900 px-3 py-2.5 text-gray-800 dark:text-gray-100 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-warning dark:focus:ring-accent  ${
                     fieldErrors.name
                       ? "ring-2 ring-red-200 dark:ring-red-900"
                       : ""
@@ -150,7 +150,7 @@ export default function Register() {
                   aria-describedby={
                     fieldErrors.email ? "email-error" : undefined
                   }
-                  className={`block w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2.5 text-gray-800 dark:text-gray-100 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-emerald-500 dark:focus:ring-emerald-400 ${
+                  className={`block w-full rounded-lg border border-warning dark:border-accent bg-white dark:bg-gray-900 px-3 py-2.5 text-gray-800 dark:text-gray-100 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-warning dark:focus:ring-accent ${
                     fieldErrors.email
                       ? "ring-2 ring-red-200 dark:ring-red-900"
                       : ""
@@ -185,7 +185,7 @@ export default function Register() {
                 aria-describedby={
                   fieldErrors.password ? "password-error" : undefined
                 }
-                className={`mt-1 block w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2.5 text-gray-800 dark:text-gray-100 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-emerald-500 dark:focus:ring-emerald-400 ${
+                className={`mt-1 block w-full rounded-lg border border-warning dark:border-accent bg-white dark:bg-gray-900 px-3 py-2.5 text-gray-800 dark:text-gray-100 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-warning dark:focus:ring-accent ${
                   fieldErrors.password
                     ? "ring-2 ring-red-200 dark:ring-red-900"
                     : ""
@@ -228,7 +228,7 @@ export default function Register() {
                 aria-describedby={
                   fieldErrors.confirm ? "confirm-error" : undefined
                 }
-                className={`mt-1 block w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2.5 text-gray-800 dark:text-gray-100 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-emerald-500 dark:focus:ring-emerald-400 ${
+                className={`mt-1 block w-full rounded-lg border border-warning dark:border-accent bg-white dark:bg-gray-900 px-3 py-2.5 text-gray-800 dark:text-gray-100 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-warning dark:focus:ring-accent ${
                   fieldErrors.confirm
                     ? "ring-2 ring-red-200 dark:ring-red-900"
                     : ""
@@ -268,18 +268,18 @@ export default function Register() {
                 checked={acceptTos}
                 onChange={(e) => setAcceptTos(e.target.checked)}
                 id="tos"
-                className="h-4 w-4 rounded border-gray-300 text-emerald-600 focus:ring-emerald-500"
+                className="h-4 w-4 rounded border-gray-300 text-accent focus:ring-accent"
               />
               <label
                 htmlFor="tos"
                 className="text-sm text-gray-600 dark:text-gray-300"
               >
                 I agree to the{" "}
-                <a href="#" className="text-emerald-600 hover:underline">
+                <a href="#" className="dark:text-accent text-secondary hover:underline">
                   terms
                 </a>{" "}
                 and{" "}
-                <a href="#" className="text-emerald-600 hover:underline">
+                <a href="#" className="dark:text-accent text-secondary hover:underline">
                   privacy policy
                 </a>
                 .
@@ -303,7 +303,7 @@ export default function Register() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full inline-flex items-center justify-center gap-2 rounded-lg py-2.5 px-3 bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-700 hover:to-teal-600 text-white text-sm font-semibold shadow focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-emerald-500 disabled:opacity-60"
+                className="w-full inline-flex items-center justify-center gap-2 rounded-lg py-2.5 px-3 bg-warning dark:bg-accent dark:text-black text-white text-sm font-semibold shadow focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-black disabled:opacity-60"
               >
                 {loading ? (
                   <svg
@@ -339,7 +339,7 @@ export default function Register() {
               <button
                 type="button"
                 onClick={() => navigate("/")}
-                className="text-emerald-600 dark:text-emerald-400 font-medium hover:underline"
+                className="text-secondary dark:text-accent font-medium hover:underline"
               >
                 Sign in
               </button>

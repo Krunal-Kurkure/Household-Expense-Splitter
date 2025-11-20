@@ -90,7 +90,7 @@ export default function Login() {
       {/* Compact container */}
       <div className="w-full max-w-sm sm:max-w-sm md:max-w-md space-y-6">
         {/* Card */}
-        <div className="bg-white dark:bg-gray-800 shadow-md rounded-xl p-5 sm:p-6">
+        <div className="bg-white border border-warning dark:border-accent dark:bg-gray-800 shadow-md rounded-xl p-5 sm:p-6">
           {/* Header */}
           <div className="text-center mb-4">
             <h2 className="mt-3 text-lg sm:text-xl font-semibold text-gray-900 dark:text-gray-100">
@@ -111,7 +111,7 @@ export default function Login() {
                 onChange={(e) => setEmail(e.target.value)}
                 aria-invalid={fieldErrors.email ? "true" : "false"}
                 aria-describedby={fieldErrors.email ? "email-error" : undefined}
-                className={`mt-1 block w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2.5 text-gray-800 dark:text-gray-100 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-emerald-500 dark:focus:ring-emerald-400 ${
+                className={`mt-1 block w-full rounded-lg border border-warning dark:border-accent bg-white dark:bg-gray-900 px-3 py-2.5 text-gray-800 dark:text-gray-100 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-warning dark:focus:ring-accent ${
                   fieldErrors.email ? "ring-2 ring-red-200 dark:ring-red-900" : ""
                 }`}
                 placeholder="you@example.com"
@@ -133,7 +133,7 @@ export default function Login() {
                 onChange={(e) => setPassword(e.target.value)}
                 aria-invalid={fieldErrors.password ? "true" : "false"}
                 aria-describedby={fieldErrors.password ? "password-error" : undefined}
-                className={`mt-1 block w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2.5 text-gray-800 dark:text-gray-100 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-emerald-500 dark:focus:ring-emerald-400 ${
+                className={`mt-1 block w-full rounded-lg border border-warning dark:border-accent bg-white dark:bg-gray-900 px-3 py-2.5 text-gray-800 dark:text-gray-100 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-warning dark:focus:ring-accent ${
                   fieldErrors.password ? "ring-2 ring-red-200 dark:ring-red-900" : ""
                 }`}
                 placeholder="Enter your password"
@@ -169,7 +169,7 @@ export default function Login() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full inline-flex items-center justify-center gap-2 rounded-lg py-2.5 px-3 bg-gradient-to-r from-emerald-600 to-sky-500 hover:from-emerald-700 hover:to-sky-600 text-white text-sm font-semibold shadow focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-emerald-500 disabled:opacity-60"
+                className="w-full inline-flex items-center justify-center gap-2 rounded-lg py-2.5 px-3 bg-warning dark:bg-accent dark:text-black  text-white text-sm font-semibold shadow focus:outline-none focus:ring-1 focus:ring-offset-1 focus:ring-black disabled:opacity-60"
               >
                 {loading ? (
                   <svg className="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -210,7 +210,7 @@ export default function Login() {
            <button
                 type="button"
                 onClick={() => navigate("/register")}
-                className="text-emerald-600 dark:text-emerald-400 font-medium hover:underline"
+                className="text-secondary dark:text-accent font-medium hover:underline"
               >
                 Register
               </button>
