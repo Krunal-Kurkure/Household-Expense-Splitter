@@ -7,6 +7,7 @@ import { Eye, EyeOff, Github, Globe } from "lucide-react";
 import { Navigate } from "react-router-dom";
 // If you want automatic navigation after login, install react-router-dom and uncomment below:
 import { useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 /**
  * Replace with your real backend URL (full URL if cross-origin).
@@ -86,7 +87,11 @@ export default function Login() {
   };
 
   return (
+    <>
+    <Navbar/>
+   
     <div className="min-h-screen flex items-center justify-center bg-background dark:bg-gray-900 px-4 py-10">
+      
       {/* Compact container */}
       <div className="w-full max-w-sm sm:max-w-sm md:max-w-md space-y-6">
         {/* Card */}
@@ -219,5 +224,6 @@ export default function Login() {
 
       </div>
     </div>
+     </>
   );
 }
