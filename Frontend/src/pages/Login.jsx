@@ -86,7 +86,7 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 px-4 py-10">
+    <div className="min-h-screen flex items-center justify-center bg-background dark:bg-gray-900 px-4 py-10">
       {/* Compact container */}
       <div className="w-full max-w-sm sm:max-w-sm md:max-w-md space-y-6">
         {/* Card */}
